@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Create Account</title>
+  <style>body{font-family:Arial;max-width:760px;margin:20px auto;padding:10px} form{border:1px solid #ddd;padding:12px;border-radius:6px} input{display:block;margin:8px 0;padding:8px;width:98%}</style>
+
+   <link rel="stylesheet" href="create-account.css" />
+
+</head>
+<body>
+  <div class="container">
+    <h2>Create Account</h2>
+    <div class="navbar">
+      <a href="/">Home</a>
+      <a href="/login.html">Login</a>
+    </div>
+
+    <form id="registerForm">
+      <input name="name" placeholder="Name" required />
+      <input name="email" placeholder="Email" required />
+      <input name="password" placeholder="Password" type="password" required />
+      
+      <select name="role" id="roleSelect">
+        <option value="User">Register as User</option>
+        <option value="Admin">Register as Admin</option>
+      </select>
+
+      <div id="adminSecretWrap" style="display:none;">
+        <input name="adminSecret" placeholder="Admin Secret (required for admin)" />
+      </div>
+
+      <button type="submit">Create Account</button>
+    </form>
+
+    <div id="out"></div>
+  </div>
+
+  <script>
+    document.getElementById('roleSelect').addEventListener('change', function(){
+      document.getElementById('adminSecretWrap').style.display = this.value === 'Admin' ? 'block' : 'none';
+    });
+  </script>
+  <script src="/js/auth.js"></script>
+</body>
+
+</html>

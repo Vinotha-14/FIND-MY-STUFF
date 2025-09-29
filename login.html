@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Login</title>
+  <style>body{font-family:Arial;max-width:760px;margin:20px auto;padding:10px} form{border:1px solid #ddd;padding:12px;border-radius:6px} input{display:block;margin:8px 0;padding:8px;width:98%}</style>
+          <link rel="stylesheet" href="login.css" />
+
+</head>
+<body>
+  <h2>Login</h2>
+  <p><a href="/">Home</a> | <a href="/create-account.html">Create Account</a> | <a href="/forgot-password.html">Forgot Password</a></p>
+
+  <form id="loginForm">
+
+ 
+  <div class="radio-group">
+  <label class="radio-option">
+    <input type="radio" name="role" value="user">
+    <span>👤 Login as User</span>
+  </label>
+  <label class="radio-option">
+    <input type="radio" name="role" value="admin">
+    <span>🛡️ Login as Admin</span>
+  </label>
+</div>
+
+
+
+    <input name="email" placeholder="Email" required />
+    <input name="password" placeholder="Password" type="password" required />
+    <button>Login</button>
+  </form>
+
+  <div id="out" style="padding:8px;margin-top:12px;background:#f8f4f4;border-radius:6px;"></div>
+
+<script src="/js/auth.js"></script>
+</body>
+</html>

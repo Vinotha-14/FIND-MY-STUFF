@@ -1,0 +1,101 @@
+/* index.css */
+
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* Gradient background */
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  padding: 20px;
+}
+
+/* Catchy Gradient Heading */
+.logo-text {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
+  animation: shine 3s infinite linear;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.logo-icon {
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
+  vertical-align: middle;
+  animation: bounce 2s infinite;
+}
+
+/* Shine animation */
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Bounce animation for bag */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+
+
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+
+  /* Standard property (for Firefox & future browsers) */
+  background-clip: text;
+
+  /* Vendor prefix (needed for Chrome, Safari, Edge) */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+/* Links */
+p a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  transition: all 0.3s ease;
+  margin: 0 10px;
+}
+
+p a:hover {
+  background: linear-gradient(90deg, #43e97b, #38f9d7);
+  transform: translateY(-3px);
+}
+
+/* Quote section */
+p:last-of-type {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.6;
+  max-width: 600px;
+}
